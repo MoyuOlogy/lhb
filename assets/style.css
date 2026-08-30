@@ -308,9 +308,10 @@ a:hover { text-decoration: underline; }
 .seat-row .sname {
   flex: 1;
   min-width: 0;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  white-space: nowrap;
+  white-space: normal;
+  overflow-wrap: break-word;
+  line-height: 1.45;
+  padding: 2px 0;
   color: var(--text);
 }
 .seat-row .st {
