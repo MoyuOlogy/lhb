@@ -255,7 +255,7 @@ a:hover { text-decoration: underline; }
   gap: 14px;
   background: #fafbfc;
 }
-@media (max-width: 700px) { .seat-body { grid-template-columns: 1fr; } }
+@media (max-width: 900px) { .seat-body { grid-template-columns: 1fr; } }
 
 .seat-col {
   min-width: 0;
