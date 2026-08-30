@@ -32,6 +32,7 @@
       <div class="sum-card"><div class="label">上榜家数</div><div class="value">${sum.count}</div></div>
       <div class="sum-card"><div class="label">净买合计</div><div class="value ${sum.netTotal > 0 ? 'up' : sum.netTotal < 0 ? 'down' : ''}">${fmtAmount(sum.netTotal)}</div></div>
       <div class="sum-card"><div class="label">沪深股通买入</div><div class="value accent">${sum.gutongBuyCount} 家</div><div class="hint">净额 ${fmtAmount(sum.gutongNet)}</div></div>
+      <div class="sum-card"><div class="label">游资买入</div><div class="value" style="color:#c2410c">${sum.youziBuyCount || 0} 家</div><div class="hint">净额 ${fmtAmount(sum.youziNet)}</div></div>
       <div class="sum-card"><div class="label">机构买入</div><div class="value">${sum.orgBuyCount} 家</div><div class="hint">净额 ${fmtAmount(sum.orgNet)}</div></div>
     `;
   }
@@ -41,6 +42,7 @@
     let stocks = dayData.stocks;
     if (filter === 'deep') stocks = stocks.filter(s => s.hasDeepBuy);
     else if (filter === 'gutong') stocks = stocks.filter(s => s.hasGutongBuy);
+    else if (filter === 'youzi') stocks = stocks.filter(s => s.hasYouziBuy);
     else if (filter === 'org') stocks = stocks.filter(s => s.hasOrgBuy);
     else if (filter === 'netup') stocks = stocks.filter(s => (s.lhbNet || 0) > 0);
     else if (filter === 'netdown') stocks = stocks.filter(s => (s.lhbNet || 0) < 0);

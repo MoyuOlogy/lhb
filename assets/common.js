@@ -35,7 +35,7 @@ function pctClass(v) {
 // 席位标签渲染
 function seatTagsHtml(tags) {
   if (!tags || !tags.length) return '';
-  const cls = { '深股通': 'deep', '沪股通': 'hutong', '机构': 'org' };
+  const cls = { '深股通': 'deep', '沪股通': 'hutong', '机构': 'org', '游资': 'youzi' };
   return tags.map(t => `<span class="tag ${cls[t] || ''}">${t}</span>`).join('');
 }
 
@@ -45,6 +45,7 @@ function stockTagsHtml(s) {
   if (s.hasDeepBuy) h += '<span class="tag deep">深股通买入</span>';
   if (s.hasGutongBuy && !s.hasDeepBuy) h += '<span class="tag hutong">沪股通买入</span>';
   if (s.hasOrgBuy) h += '<span class="tag org">机构买入</span>';
+  if (s.hasYouziBuy) h += '<span class="tag youzi">游资买入</span>';
   return h;
 }
 
@@ -58,9 +59,14 @@ function seatBodyHtml(s) {
     <div class="seat-col ${side}">
       <h4><span class="side-tag">${label}</span>前五席位</h4>
       ${seats.map((st, i) => {
-        const cls = st.tags && st.tags.length
-          ? 'seat-row ' + (st.tags.includes('深股通') ? 'deep' : st.tags.includes('沪股通') ? 'hutong' : 'org')
-          : 'seat-row';
+        let rowCls = '';
+        if (st.tags && st.tags.length) {
+          if (st.tags.includes('深股通')) rowCls = 'deep';
+          else if (st.tags.includes('沪股通')) rowCls = 'hutong';
+          else if (st.tags.includes('机构')) rowCls = 'org';
+          else if (st.tags.includes('游资')) rowCls = 'youzi';
+        }
+        const cls = rowCls ? 'seat-row ' + rowCls : 'seat-row';
         const amt = side === 'buySeats' ? st.buy : st.sell;
         return `
         <div class="${cls}">

@@ -1,6 +1,6 @@
 {
   "date": "2026-08-28",
-  "fetchedAt": "2026-08-30T14:35:36+08:00",
+  "fetchedAt": "2026-08-30T15:13:23+08:00",
   "market": "沪深主板",
   "source": "东方财富数据中心（原始出处：沪深交易所交易公开信息）",
   "summary": {
@@ -9,7 +9,9 @@
     "gutongBuyCount": 17,
     "gutongNet": -595482039.42,
     "orgBuyCount": 9,
-    "orgNet": -552976553.98
+    "orgNet": -552976553.98,
+    "youziBuyCount": 5,
+    "youziNet": -59162530.86
   },
   "stocks": [
     {
@@ -115,9 +117,11 @@
       ],
       "gutongNet": null,
       "orgNet": 18499214.28,
+      "youziNet": null,
       "hasGutongBuy": false,
       "hasDeepBuy": false,
-      "hasOrgBuy": true
+      "hasOrgBuy": true,
+      "hasYouziBuy": false
     },
     {
       "code": "000062",
@@ -218,9 +222,11 @@
       ],
       "gutongNet": -39819767.19,
       "orgNet": -8834274.0,
+      "youziNet": null,
       "hasGutongBuy": true,
       "hasDeepBuy": true,
-      "hasOrgBuy": false
+      "hasOrgBuy": false,
+      "hasYouziBuy": false
     },
     {
       "code": "000712",
@@ -317,9 +323,11 @@
       ],
       "gutongNet": 28502305.25,
       "orgNet": -7644521.0,
+      "youziNet": null,
       "hasGutongBuy": true,
       "hasDeepBuy": true,
-      "hasOrgBuy": false
+      "hasOrgBuy": false,
+      "hasYouziBuy": false
     },
     {
       "code": "001232",
@@ -415,14 +423,18 @@
           "buy": 9934874.91,
           "sell": 27753742.14,
           "net": -17818867.23,
-          "tags": []
+          "tags": [
+            "游资"
+          ]
         }
       ],
       "gutongNet": null,
       "orgNet": 28974738.31,
+      "youziNet": -17818867.23,
       "hasGutongBuy": false,
       "hasDeepBuy": false,
-      "hasOrgBuy": true
+      "hasOrgBuy": true,
+      "hasYouziBuy": false
     },
     {
       "code": "002072",
@@ -517,9 +529,11 @@
       ],
       "gutongNet": null,
       "orgNet": -951584.0,
+      "youziNet": null,
       "hasGutongBuy": false,
       "hasDeepBuy": false,
-      "hasOrgBuy": true
+      "hasOrgBuy": true,
+      "hasYouziBuy": false
     },
     {
       "code": "002084",
@@ -608,9 +622,11 @@
       ],
       "gutongNet": null,
       "orgNet": null,
+      "youziNet": null,
       "hasGutongBuy": false,
       "hasDeepBuy": false,
-      "hasOrgBuy": false
+      "hasOrgBuy": false,
+      "hasYouziBuy": false
     },
     {
       "code": "002396",
@@ -693,7 +709,9 @@
           "buy": 15228673.7,
           "sell": 50723481.74,
           "net": -35494808.04,
-          "tags": []
+          "tags": [
+            "游资"
+          ]
         },
         {
           "name": "机构专用",
@@ -707,9 +725,11 @@
       ],
       "gutongNet": 57965976.97,
       "orgNet": -28437129.2,
+      "youziNet": -35494808.04,
       "hasGutongBuy": true,
       "hasDeepBuy": true,
-      "hasOrgBuy": false
+      "hasOrgBuy": false,
+      "hasYouziBuy": false
     },
     {
       "code": "002412",
@@ -810,9 +830,11 @@
       ],
       "gutongNet": null,
       "orgNet": -11258056.72,
+      "youziNet": null,
       "hasGutongBuy": false,
       "hasDeepBuy": false,
-      "hasOrgBuy": true
+      "hasOrgBuy": true,
+      "hasYouziBuy": false
     },
     {
       "code": "002418",
@@ -897,7 +919,9 @@
           "buy": 10696513.0,
           "sell": 34563803.0,
           "net": -23867290.0,
-          "tags": []
+          "tags": [
+            "游资"
+          ]
         },
         {
           "name": "机构专用",
@@ -911,9 +935,11 @@
       ],
       "gutongNet": -12197258.12,
       "orgNet": -8143332.48,
+      "youziNet": -23867290.0,
       "hasGutongBuy": true,
       "hasDeepBuy": true,
-      "hasOrgBuy": true
+      "hasOrgBuy": true,
+      "hasYouziBuy": false
     },
     {
       "code": "002437",
@@ -1018,9 +1044,11 @@
       ],
       "gutongNet": 4307782.78,
       "orgNet": 33295444.75,
+      "youziNet": null,
       "hasGutongBuy": false,
       "hasDeepBuy": false,
-      "hasOrgBuy": true
+      "hasOrgBuy": true,
+      "hasYouziBuy": false
     },
     {
       "code": "002445",
@@ -1115,9 +1143,11 @@
       ],
       "gutongNet": -28216183.25,
       "orgNet": -7765230.8,
+      "youziNet": null,
       "hasGutongBuy": true,
       "hasDeepBuy": true,
-      "hasOrgBuy": false
+      "hasOrgBuy": false,
+      "hasYouziBuy": false
     },
     {
       "code": "002731",
@@ -1206,9 +1236,11 @@
       ],
       "gutongNet": null,
       "orgNet": null,
+      "youziNet": null,
       "hasGutongBuy": false,
       "hasDeepBuy": false,
-      "hasOrgBuy": false
+      "hasOrgBuy": false,
+      "hasYouziBuy": false
     },
     {
       "code": "002742",
@@ -1297,9 +1329,11 @@
       ],
       "gutongNet": null,
       "orgNet": null,
+      "youziNet": null,
       "hasGutongBuy": false,
       "hasDeepBuy": false,
-      "hasOrgBuy": false
+      "hasOrgBuy": false,
+      "hasYouziBuy": false
     },
     {
       "code": "002886",
@@ -1402,9 +1436,11 @@
       ],
       "gutongNet": 18978474.16,
       "orgNet": -6809861.4,
+      "youziNet": null,
       "hasGutongBuy": true,
       "hasDeepBuy": true,
-      "hasOrgBuy": true
+      "hasOrgBuy": true,
+      "hasYouziBuy": false
     },
     {
       "code": "002942",
@@ -1503,9 +1539,11 @@
       ],
       "gutongNet": null,
       "orgNet": -14878080.0,
+      "youziNet": null,
       "hasGutongBuy": false,
       "hasDeepBuy": false,
-      "hasOrgBuy": true
+      "hasOrgBuy": true,
+      "hasYouziBuy": false
     },
     {
       "code": "002963",
@@ -1608,9 +1646,11 @@
       ],
       "gutongNet": null,
       "orgNet": -1576440.0,
+      "youziNet": null,
       "hasGutongBuy": false,
       "hasDeepBuy": false,
-      "hasOrgBuy": true
+      "hasOrgBuy": true,
+      "hasYouziBuy": false
     },
     {
       "code": "600127",
@@ -1703,9 +1743,11 @@
       ],
       "gutongNet": -83852813.22,
       "orgNet": null,
+      "youziNet": null,
       "hasGutongBuy": true,
       "hasDeepBuy": false,
-      "hasOrgBuy": false
+      "hasOrgBuy": false,
+      "hasYouziBuy": false
     },
     {
       "code": "600162",
@@ -1802,9 +1844,11 @@
       ],
       "gutongNet": -44032231.12,
       "orgNet": null,
+      "youziNet": null,
       "hasGutongBuy": true,
       "hasDeepBuy": false,
-      "hasOrgBuy": false
+      "hasOrgBuy": false,
+      "hasYouziBuy": false
     },
     {
       "code": "600227",
@@ -1897,9 +1941,11 @@
       ],
       "gutongNet": -113905874.9,
       "orgNet": null,
+      "youziNet": null,
       "hasGutongBuy": true,
       "hasDeepBuy": false,
-      "hasOrgBuy": false
+      "hasOrgBuy": false,
+      "hasYouziBuy": false
     },
     {
       "code": "600272",
@@ -1983,14 +2029,18 @@
           "buy": null,
           "sell": 12467470.0,
           "net": -12467470.0,
-          "tags": []
+          "tags": [
+            "游资"
+          ]
         }
       ],
       "gutongNet": null,
       "orgNet": null,
+      "youziNet": -12467470.0,
       "hasGutongBuy": false,
       "hasDeepBuy": false,
-      "hasOrgBuy": false
+      "hasOrgBuy": false,
+      "hasYouziBuy": false
     },
     {
       "code": "600378",
@@ -2083,9 +2133,11 @@
       ],
       "gutongNet": -51677983.98,
       "orgNet": -518525845.65,
+      "youziNet": null,
       "hasGutongBuy": false,
       "hasDeepBuy": false,
-      "hasOrgBuy": false
+      "hasOrgBuy": false,
+      "hasYouziBuy": false
     },
     {
       "code": "600540",
@@ -2174,9 +2226,11 @@
       ],
       "gutongNet": null,
       "orgNet": null,
+      "youziNet": null,
       "hasGutongBuy": false,
       "hasDeepBuy": false,
-      "hasOrgBuy": false
+      "hasOrgBuy": false,
+      "hasYouziBuy": false
     },
     {
       "code": "600610",
@@ -2218,7 +2272,9 @@
           "buy": 12450184.0,
           "sell": null,
           "net": 12450184.0,
-          "tags": []
+          "tags": [
+            "游资"
+          ]
         },
         {
           "name": "国信证券股份有限公司浙江互联网分公司",
@@ -2234,14 +2290,18 @@
           "buy": null,
           "sell": 13055382.85,
           "net": -13055382.85,
-          "tags": []
+          "tags": [
+            "游资"
+          ]
         },
         {
           "name": "东方财富证券股份有限公司拉萨东环路第一证券营业部",
           "buy": null,
           "sell": 12618370.0,
           "net": -12618370.0,
-          "tags": []
+          "tags": [
+            "游资"
+          ]
         },
         {
           "name": "东方财富证券股份有限公司昌都两江大道证券营业部",
@@ -2255,7 +2315,9 @@
           "buy": null,
           "sell": 10294431.01,
           "net": -10294431.01,
-          "tags": []
+          "tags": [
+            "游资"
+          ]
         },
         {
           "name": "国信证券股份有限公司浙江互联网分公司",
@@ -2267,9 +2329,11 @@
       ],
       "gutongNet": 13462734.77,
       "orgNet": null,
+      "youziNet": -35968183.86,
       "hasGutongBuy": true,
       "hasDeepBuy": false,
-      "hasOrgBuy": false
+      "hasOrgBuy": false,
+      "hasYouziBuy": true
     },
     {
       "code": "600613",
@@ -2358,9 +2422,11 @@
       ],
       "gutongNet": null,
       "orgNet": null,
+      "youziNet": null,
       "hasGutongBuy": false,
       "hasDeepBuy": false,
-      "hasOrgBuy": false
+      "hasOrgBuy": false,
+      "hasYouziBuy": false
     },
     {
       "code": "600654",
@@ -2453,9 +2519,11 @@
       ],
       "gutongNet": -27951036.0,
       "orgNet": null,
+      "youziNet": null,
       "hasGutongBuy": true,
       "hasDeepBuy": false,
-      "hasOrgBuy": false
+      "hasOrgBuy": false,
+      "hasYouziBuy": false
     },
     {
       "code": "600691",
@@ -2548,9 +2616,11 @@
       ],
       "gutongNet": -17342368.06,
       "orgNet": null,
+      "youziNet": null,
       "hasGutongBuy": true,
       "hasDeepBuy": false,
-      "hasOrgBuy": false
+      "hasOrgBuy": false,
+      "hasYouziBuy": false
     },
     {
       "code": "600721",
@@ -2583,7 +2653,9 @@
           "buy": 32221718.57,
           "sell": null,
           "net": 32221718.57,
-          "tags": []
+          "tags": [
+            "游资"
+          ]
         },
         {
           "name": "东方财富证券股份有限公司昌都两江大道证券营业部",
@@ -2620,7 +2692,9 @@
           "buy": null,
           "sell": 28832316.0,
           "net": -28832316.0,
-          "tags": []
+          "tags": [
+            "游资"
+          ]
         },
         {
           "name": "国信证券股份有限公司浙江互联网分公司",
@@ -2639,9 +2713,11 @@
       ],
       "gutongNet": null,
       "orgNet": null,
+      "youziNet": 3389402.57,
       "hasGutongBuy": false,
       "hasDeepBuy": false,
-      "hasOrgBuy": false
+      "hasOrgBuy": false,
+      "hasYouziBuy": true
     },
     {
       "code": "600815",
@@ -2734,9 +2810,11 @@
       ],
       "gutongNet": -46673806.38,
       "orgNet": null,
+      "youziNet": null,
       "hasGutongBuy": true,
       "hasDeepBuy": false,
-      "hasOrgBuy": false
+      "hasOrgBuy": false,
+      "hasYouziBuy": false
     },
     {
       "code": "600984",
@@ -2764,14 +2842,18 @@
           "buy": 24523820.7,
           "sell": null,
           "net": 24523820.7,
-          "tags": []
+          "tags": [
+            "游资"
+          ]
         },
         {
           "name": "东方财富证券股份有限公司拉萨东环路第二证券营业部",
           "buy": 22718619.9,
           "sell": null,
           "net": 22718619.9,
-          "tags": []
+          "tags": [
+            "游资"
+          ]
         },
         {
           "name": "东方财富证券股份有限公司山南香曲东路证券营业部",
@@ -2829,9 +2911,11 @@
       ],
       "gutongNet": -67902805.1,
       "orgNet": null,
+      "youziNet": 47242440.6,
       "hasGutongBuy": true,
       "hasDeepBuy": false,
-      "hasOrgBuy": false
+      "hasOrgBuy": false,
+      "hasYouziBuy": true
     },
     {
       "code": "603086",
@@ -2920,9 +3004,11 @@
       ],
       "gutongNet": null,
       "orgNet": null,
+      "youziNet": null,
       "hasGutongBuy": false,
       "hasDeepBuy": false,
-      "hasOrgBuy": false
+      "hasOrgBuy": false,
+      "hasYouziBuy": false
     },
     {
       "code": "603261",
@@ -3011,9 +3097,11 @@
       ],
       "gutongNet": null,
       "orgNet": null,
+      "youziNet": null,
       "hasGutongBuy": false,
       "hasDeepBuy": false,
-      "hasOrgBuy": false
+      "hasOrgBuy": false,
+      "hasYouziBuy": false
     },
     {
       "code": "603319",
@@ -3106,9 +3194,11 @@
       ],
       "gutongNet": -55590203.36,
       "orgNet": null,
+      "youziNet": null,
       "hasGutongBuy": true,
       "hasDeepBuy": false,
-      "hasOrgBuy": false
+      "hasOrgBuy": false,
+      "hasYouziBuy": false
     },
     {
       "code": "603395",
@@ -3148,14 +3238,18 @@
           "buy": 9207662.6,
           "sell": null,
           "net": 9207662.6,
-          "tags": []
+          "tags": [
+            "游资"
+          ]
         },
         {
           "name": "东方财富证券股份有限公司拉萨东环路第二证券营业部",
           "buy": 8944677.4,
           "sell": null,
           "net": 8944677.4,
-          "tags": []
+          "tags": [
+            "游资"
+          ]
         }
       ],
       "sellSeats": [
@@ -3194,14 +3288,18 @@
           "buy": null,
           "sell": 8848130.5,
           "net": -8848130.5,
-          "tags": []
+          "tags": [
+            "游资"
+          ]
         }
       ],
       "gutongNet": -25417363.83,
       "orgNet": null,
+      "youziNet": 359532.1,
       "hasGutongBuy": false,
       "hasDeepBuy": false,
-      "hasOrgBuy": false
+      "hasOrgBuy": false,
+      "hasYouziBuy": true
     },
     {
       "code": "603396",
@@ -3296,9 +3394,11 @@
       ],
       "gutongNet": -59227956.88,
       "orgNet": -18921596.07,
+      "youziNet": null,
       "hasGutongBuy": true,
       "hasDeepBuy": false,
-      "hasOrgBuy": false
+      "hasOrgBuy": false,
+      "hasYouziBuy": false
     },
     {
       "code": "603725",
@@ -3387,9 +3487,11 @@
       ],
       "gutongNet": null,
       "orgNet": null,
+      "youziNet": null,
       "hasGutongBuy": false,
       "hasDeepBuy": false,
-      "hasOrgBuy": false
+      "hasOrgBuy": false,
+      "hasYouziBuy": false
     },
     {
       "code": "603950",
@@ -3482,9 +3584,11 @@
       ],
       "gutongNet": -44891661.96,
       "orgNet": null,
+      "youziNet": null,
       "hasGutongBuy": true,
       "hasDeepBuy": false,
-      "hasOrgBuy": false
+      "hasOrgBuy": false,
+      "hasYouziBuy": false
     },
     {
       "code": "603958",
@@ -3503,7 +3607,9 @@
           "buy": 15462713.0,
           "sell": null,
           "net": 15462713.0,
-          "tags": []
+          "tags": [
+            "游资"
+          ]
         },
         {
           "name": "东莞证券股份有限公司南京分公司",
@@ -3573,9 +3679,11 @@
       ],
       "gutongNet": null,
       "orgNet": null,
+      "youziNet": 15462713.0,
       "hasGutongBuy": false,
       "hasDeepBuy": false,
-      "hasOrgBuy": false
+      "hasOrgBuy": false,
+      "hasYouziBuy": true
     }
   ]
 }

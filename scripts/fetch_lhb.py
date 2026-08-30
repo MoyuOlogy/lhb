@@ -51,6 +51,25 @@ SEAT_TAG_RULES = [
     ("机构专用", "机构"),
 ]
 
+# 游资席位关键词（市场公认的活跃游资大本营，匹配到即标注"游资"标签）
+# 说明：游资席位会随市场变化，此处为常见公认席位，可按需增删
+YOUZI_KEYWORDS = (
+    # 东方财富拉萨系（散户/游资聚集地）
+    "拉萨团结路", "拉萨东环路", "拉萨金融城", "拉萨柳梧新区", "拉萨北京中路",
+    # 知名游资席位
+    "上海江苏路",       # 国泰君安上海江苏路（章盟主）
+    "上海溧阳路",       # 中信上海溧阳路（孙哥）
+    "绍兴证券营业部",   # 银河绍兴（赵老哥）
+    "益田路荣超",       # 华泰深圳益田路荣超商务中心
+    "宁波解放南路",     # 光大宁波解放南路（敢死队）
+    "杭州延安路",       # 方正杭州延安路
+    "华鑫证券上海分公司", "华鑫证券上海茅台路", "华鑫证券上海宛平南路",  # 炒股养家系
+    "上海牡丹江路",     # 招商证券上海牡丹江路
+    "深圳益田路",       # 华泰系
+    "上海武定路",       # 知名游资
+    "杭州体育馆",       # 知名游资
+)
+
 DATA_DIR = os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))), "data")
 
 
@@ -112,7 +131,10 @@ def fetch_seats(date_str, code, side):
 
 
 def seat_tags(name):
-    return [tag for keyword, tag in SEAT_TAG_RULES if keyword in name]
+    tags = [tag for keyword, tag in SEAT_TAG_RULES if keyword in name]
+    if any(kw in name for kw in YOUZI_KEYWORDS):
+        tags.append("游资")
+    return tags
 
 
 def build_stocks(date_str, rows):
@@ -160,9 +182,11 @@ def build_stocks(date_str, rows):
 
         item["gutongNet"] = special_net(("深股通", "沪股通"))
         item["orgNet"] = special_net(("机构",))
+        item["youziNet"] = special_net(("游资",))
         item["hasGutongBuy"] = any(("深股通" in s["tags"] or "沪股通" in s["tags"]) for s in buy_seats)
         item["hasDeepBuy"] = any("深股通" in s["tags"] for s in buy_seats)
         item["hasOrgBuy"] = any("机构" in s["tags"] for s in buy_seats)
+        item["hasYouziBuy"] = any("游资" in s["tags"] for s in buy_seats)
         stocks.append(item)
         print("  %s %s：买方 %d 席 / 卖方 %d 席" % (code, item["name"], len(buy_seats), len(sell_seats)))
         time.sleep(0.4)  # 控制请求频率
@@ -184,6 +208,8 @@ def write_outputs(date_str, stocks):
             "gutongNet": round(sum(s["gutongNet"] or 0 for s in stocks if s["gutongNet"]), 2),
             "orgBuyCount": sum(1 for s in stocks if s["hasOrgBuy"]),
             "orgNet": round(sum(s["orgNet"] or 0 for s in stocks if s["orgNet"]), 2),
+            "youziBuyCount": sum(1 for s in stocks if s["hasYouziBuy"]),
+            "youziNet": round(sum(s["youziNet"] or 0 for s in stocks if s["youziNet"]), 2),
         },
         "stocks": stocks,
     }
@@ -209,6 +235,8 @@ def write_outputs(date_str, stocks):
         "netTotal": doc["summary"]["netTotal"],
         "gutongBuyCount": doc["summary"]["gutongBuyCount"],
         "gutongNet": doc["summary"]["gutongNet"],
+        "youziBuyCount": doc["summary"]["youziBuyCount"],
+        "youziNet": doc["summary"]["youziNet"],
     })
     index["dates"].sort(key=lambda e: e["date"], reverse=True)
     with open(idx_path, "w", encoding="utf-8") as f:

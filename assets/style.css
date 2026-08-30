@@ -215,6 +215,7 @@ a:hover { text-decoration: underline; }
 .tag.deep { color: var(--accent-deep); background: var(--accent-soft); border: 1px solid #fcd34d; }
 .tag.hutong { color: var(--hutong-deep); background: var(--hutong-soft); border: 1px solid #a5f3fc; }
 .tag.org { color: var(--org-deep); background: var(--org-soft); border: 1px solid #cbd5e1; }
+.tag.youzi { color: #c2410c; background: #fff7ed; border: 1px solid #fdba74; }
 
 .stock-metrics {
   display: flex;
@@ -335,10 +336,11 @@ a:hover { text-decoration: underline; }
 .seat-row .snet.up { color: var(--up); }
 .seat-row .snet.down { color: var(--down); }
 
-/* 深股通/沪股通/机构席位的高亮行 */
+/* 深股通/沪股通/机构/游资席位的高亮行 */
 .seat-row.deep { background: var(--accent-soft); }
 .seat-row.hutong { background: var(--hutong-soft); }
 .seat-row.org { background: var(--org-soft); }
+.seat-row.youzi { background: #fff7ed; }
 
 /* ---------- 空状态 ---------- */
 .empty {
