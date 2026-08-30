@@ -31,7 +31,7 @@
     summaryEl.innerHTML = `
       <div class="sum-card"><div class="label">上榜家数</div><div class="value">${sum.count}</div></div>
       <div class="sum-card"><div class="label">净买合计</div><div class="value ${sum.netTotal > 0 ? 'up' : sum.netTotal < 0 ? 'down' : ''}">${fmtAmount(sum.netTotal)}</div></div>
-      <div class="sum-card"><div class="label">沪深股通买入</div><div class="value gold">${sum.gutongBuyCount} 家</div><div class="hint">净额 ${fmtAmount(sum.gutongNet)}</div></div>
+      <div class="sum-card"><div class="label">沪深股通买入</div><div class="value accent">${sum.gutongBuyCount} 家</div><div class="hint">净额 ${fmtAmount(sum.gutongNet)}</div></div>
       <div class="sum-card"><div class="label">机构买入</div><div class="value">${sum.orgBuyCount} 家</div><div class="hint">净额 ${fmtAmount(sum.orgNet)}</div></div>
     `;
   }
