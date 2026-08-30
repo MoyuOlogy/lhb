@@ -1,6 +1,7 @@
 name: Fetch Daily LHB & Deploy
 
-# 每个交易日北京时间 20:00 / 20:30 自动抓取当日龙虎榜并部署静态站
+# 每个交易日北京时间 20:00 / 20:30 自动抓取当日龙虎榜并提交数据
+# GitHub Pages 配置为"从 main 分支构建"，push 后自动重新部署静态站
 # （GitHub Actions 使用 UTC：20:00 CST = 12:00 UTC，20:30 CST = 12:30 UTC）
 on:
   schedule:
@@ -10,15 +11,13 @@ on:
 
 permissions:
   contents: write          # 提交 data/ 数据文件
-  pages: write             # 部署 GitHub Pages
-  id-token: write          # Pages 部署所需 OIDC
 
 concurrency:
   group: pages
   cancel-in-progress: false
 
 jobs:
-  fetch-and-deploy:
+  fetch:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
@@ -43,15 +42,3 @@ jobs:
           else
             echo "No data changes to commit."
           fi
-
-      - name: Setup Pages
-        uses: actions/configure-pages@v5
-
-      - name: Upload Pages artifact
-        uses: actions/upload-pages-artifact@v3
-        with:
-          path: '.'
-
-      - name: Deploy to GitHub Pages
-        id: deployment
-        uses: actions/deploy-pages@v4
