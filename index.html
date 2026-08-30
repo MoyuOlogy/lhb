@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>龙虎榜 · 沪深主板 今日</title>
+  <meta name="description" content="沪深主板每日龙虎榜：买入前五、卖出前五席位及金额。每个交易日 20:00 自动更新。">
+  <link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+  <div class="topbar">
+    <div class="topbar-inner">
+      <div class="brand">
+        <span class="logo">榜</span>
+        <span>龙虎榜 · 沪深主板</span>
+        <span class="sub">每日 20:00 自动更新</span>
+      </div>
+      <nav class="nav">
+        <a href="index.html" class="active">今日榜单</a>
+        <a href="history.html">历史归档</a>
+      </nav>
+    </div>
+  </div>
+
+  <div class="container">
+    <h1 class="page-title" id="date-title">今日榜单</h1>
+    <div class="page-sub" id="fetched-at"></div>
+
+    <div id="summary" class="summary-grid"></div>
+
+    <div class="toolbar">
+      <div class="filter-group" id="filters">
+        <span class="chip active" data-filter="all">全部</span>
+        <span class="chip" data-filter="deep">深股通买入</span>
+        <span class="chip" data-filter="gutong">沪深股通买入</span>
+        <span class="chip" data-filter="org">机构买入</span>
+        <span class="chip" data-filter="netup">净买入</span>
+        <span class="chip" data-filter="netdown">净卖出</span>
+      </div>
+      <div class="search-box">
+        <input id="search" type="text" placeholder="搜索代码 / 名称…">
+      </div>
+    </div>
+
+    <div class="list-head">
+      <span>点击个股展开买/卖前五席位明细</span>
+      <span id="list-count"></span>
+    </div>
+    <div id="stock-list" class="stock-list">
+      <div class="loading"><div class="spinner"></div>加载中…</div>
+    </div>
+  </div>
+
+  <footer class="footer">
+    <span>数据来源：东方财富数据中心（原始出处：沪深交易所交易公开信息）</span>
+    <span>仅收录沪深主板 · 深股通买入已特别标注</span>
+  </footer>
+
+  <script src="assets/common.js"></script>
+  <script src="assets/home.js"></script>
+</body>
+</html>

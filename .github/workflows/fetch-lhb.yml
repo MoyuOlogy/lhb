@@ -1,0 +1,57 @@
+name: Fetch Daily LHB & Deploy
+
+# 每个交易日北京时间 20:00 / 20:30 自动抓取当日龙虎榜并部署静态站
+# （GitHub Actions 使用 UTC：20:00 CST = 12:00 UTC，20:30 CST = 12:30 UTC）
+on:
+  schedule:
+    - cron: '0 12 * * *'   # 北京 20:00 主抓
+    - cron: '30 12 * * *'  # 北京 20:30 补抓（数据延迟时兜底）
+  workflow_dispatch:       # 支持手动触发
+
+permissions:
+  contents: write          # 提交 data/ 数据文件
+  pages: write             # 部署 GitHub Pages
+  id-token: write          # Pages 部署所需 OIDC
+
+concurrency:
+  group: pages
+  cancel-in-progress: false
+
+jobs:
+  fetch-and-deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Fetch latest LHB data
+        run: python scripts/fetch_lhb.py
+
+      - name: Commit data changes
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add data/
+          if ! git diff --cached --quiet; then
+            git commit -m "chore(data): update daily LHB $(date -u +%Y-%m-%d)"
+            git push
+          else
+            echo "No data changes to commit."
+          fi
+
+      - name: Setup Pages
+        uses: actions/configure-pages@v5
+
+      - name: Upload Pages artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: '.'
+
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4

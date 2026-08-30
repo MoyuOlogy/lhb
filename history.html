@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>龙虎榜 · 沪深主板 历史归档</title>
+  <meta name="description" content="沪深主板每日龙虎榜历史归档：按日期查看过往交易日的买入前五、卖出前五席位及金额。">
+  <link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+  <div class="topbar">
+    <div class="topbar-inner">
+      <div class="brand">
+        <span class="logo">榜</span>
+        <span>龙虎榜 · 沪深主板</span>
+        <span class="sub">历史归档</span>
+      </div>
+      <nav class="nav">
+        <a href="index.html">今日榜单</a>
+        <a href="history.html" class="active">历史归档</a>
+      </nav>
+    </div>
+  </div>
+
+  <div class="container">
+    <h1 class="page-title">历史归档</h1>
+    <div class="page-sub" id="updated"></div>
+    <div id="day-list">
+      <div class="loading"><div class="spinner"></div>加载中…</div>
+    </div>
+  </div>
+
+  <footer class="footer">
+    <span>数据来源：东方财富数据中心（原始出处：沪深交易所交易公开信息）</span>
+    <span>仅收录沪深主板 · 深股通买入已特别标注</span>
+  </footer>
+
+  <script src="assets/common.js"></script>
+  <script src="assets/history.js"></script>
+</body>
+</html>
