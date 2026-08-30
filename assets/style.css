@@ -256,6 +256,11 @@ a:hover { text-decoration: underline; }
 }
 @media (max-width: 700px) { .seat-body { grid-template-columns: 1fr; } }
 
+.seat-col {
+  min-width: 0;
+  overflow: hidden;
+}
+
 .seat-col h4 {
   font-size: 13px;
   color: var(--text-dim);
@@ -272,8 +277,8 @@ a:hover { text-decoration: underline; }
   margin-right: 8px;
   font-weight: 700;
 }
-.seat-col.buy h4 .side-tag { color: var(--up); background: var(--up-soft); }
-.seat-col.sell h4 .side-tag { color: var(--down); background: var(--down-soft); }
+.seat-col.buySeats h4 .side-tag { color: var(--up); background: var(--up-soft); }
+.seat-col.sellSeats h4 .side-tag { color: var(--down); background: var(--down-soft); }
 
 .seat-row {
   display: flex;
@@ -284,6 +289,7 @@ a:hover { text-decoration: underline; }
   font-size: 13px;
   font-variant-numeric: tabular-nums;
   min-width: 0;
+  overflow: hidden;
 }
 .seat-row + .seat-row { border-top: 1px solid var(--border); }
 .seat-row .rank {
@@ -299,7 +305,7 @@ a:hover { text-decoration: underline; }
   color: var(--text-dim);
 }
 .seat-row .sname {
-  flex: 1 1 auto;
+  flex: 1;
   min-width: 0;
   overflow: hidden;
   text-overflow: ellipsis;
