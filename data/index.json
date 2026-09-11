@@ -1,6 +1,15 @@
 {
-  "updatedAt": "2026-09-10T23:25:03+08:00",
+  "updatedAt": "2026-09-11T23:27:16+08:00",
   "dates": [
+    {
+      "date": "2026-09-11",
+      "count": 46,
+      "netTotal": 1622604212.99,
+      "gutongBuyCount": 24,
+      "gutongNet": -821286307.39,
+      "youziBuyCount": 14,
+      "youziNet": -63728370.41
+    },
     {
       "date": "2026-09-10",
       "count": 43,
